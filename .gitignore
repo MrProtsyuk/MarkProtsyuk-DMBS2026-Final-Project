@@ -4,5 +4,4 @@ dataset_generation.txt
 .venv
 __pycache__
 secure_search.php
-NormalizedData
-s009-quickstart.md
+secret-files/
