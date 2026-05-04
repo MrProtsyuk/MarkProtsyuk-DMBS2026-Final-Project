@@ -13,7 +13,7 @@ $userid = $_POST['userid']; // Assuming user id is known
 $categoryid = $_POST['categoryid']; // Assuming category id is known
 
 // Use prepared statements to prevent SQL Injection
-$stmt = $conn->prepare("INSERT INTO BlogPosts (UserID, Title, Content, CategoryID) VALUES (?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO Post_Data (UserID, Title, Content, CategoryID) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("issi", $userid, $title, $content, $categoryid);
 
 if ($stmt->execute()) {

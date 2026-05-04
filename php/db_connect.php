@@ -1,13 +1,13 @@
 <?php
-$servername = "146.190.39.201";
+$host = "146.190.39.201";
 $port = "33069";
 $username = "student_s009";
-$password = "bqtdKY2+Z*0Hk(Ptp-a6";
+$password = "Homebrewed2003!";
 $dbname = "blog_s009";
 
 // Create connection
 // Added $port to the constructor to ensure it connects to the correct service
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
+$conn = new mysqli($host, $username, $password, $dbname, $port);
 
 // Check connection
 if ($conn->connect_error) {

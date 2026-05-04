@@ -7,10 +7,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 include 'db_connect.php';
 
-$sql = "SELECT * FROM BlogPosts";
+$sql = "SELECT * FROM Post_Data";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+if ($result && $result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         // Use htmlspecialchars to prevent XSS
         echo "id: " . htmlspecialchars($row["PostID"]) . 

@@ -130,3 +130,27 @@ a:hover {
   color: var(--link-secondary);
   text-decoration: underline;
 }
+
+#intro {
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#intro a {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  border: #000 solid 1px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--white);
+  transition: var(--transition);
+}
+
+#intro a:hover {
+  background-color: gray;
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

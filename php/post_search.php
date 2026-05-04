@@ -20,7 +20,7 @@ function searchPosts($keyword) {
     }
 
     // Use prepared statements to prevent SQL Injection
-    $stmt = $conn->prepare("SELECT PostID, Title, Content FROM BlogPosts WHERE Title LIKE ? OR Content LIKE ?");
+    $stmt = $conn->prepare("SELECT PostID, Title, Content FROM Post_Data WHERE Title LIKE ? OR Content LIKE ?");
     $searchTerm = "%" . $keyword . "%";
     $stmt->bind_param("ss", $searchTerm, $searchTerm);
     $stmt->execute();
